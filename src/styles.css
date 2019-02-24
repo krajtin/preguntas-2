@@ -1,0 +1,108 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  width: 100%;
+  max-width: 800px;
+  background-color: #e3e2e2;
+}
+.flexbox {
+  display: flex;
+}
+h2,
+p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+.info {
+  padding: 1rem 0.8rem;
+  background-color: #161a25;
+  color: #d9dadd;
+  border-radius: 1.3rem;
+  border: 3px solid #1d3d59;
+}
+.info .separador {
+  width: 100%;
+  height: 2px;
+  background-color: #d9dadd;
+  margin: 0.5rem 0;
+}
+
+.info header .icono {
+  vertical-align: middle;
+}
+.info header .titulo {
+  font-size: 1rem;
+  line-height: 1.4;
+  display: inline-block;
+}
+.info header .icono {
+  vertical-align: middle;
+}
+.info .texto {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-align: right;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animarModal;
+  animation-duration: 0.4s;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@keyframes animarModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-content .close {
+  color: white;
+  float: right;
+  font-weight: bold;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+  cursor: pointer;
+}
+
+.modal-content header {
+  padding: 0.5rem 1rem;
+  background-color: #80490a;
+  color: white;
+}
+
+.modal-content .cuerpo {
+  padding: 0.5rem 1rem;
+  word-break: break-all;
+}
